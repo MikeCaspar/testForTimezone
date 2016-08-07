@@ -1,33 +1,31 @@
 ---
 
 - set_fact:
-    ansibletestFolderTestPassed: false
+    ansibletestTimezoneTestPassed: false
 
-
-- name: "Start check of folder {{ path }}"
-  stat:
-    path: "{{ path }}"
+- name: "Check for a timezone of {{ timezoneCity }}"
+  command: "cat /etc/timezone"
   register: st
 
 - debug:
-    var: st
+    var: st.stdout
   when: "{{debug==true}}"
 
-- include: test_present.yml
-  when:
-    - "{{ expected == 'present' }}"
+- debug:
+    var: timezoneCity
 
-- include: test_absent.yml
-  when:
-    - "{{ expected == 'absent' }}"
+- name: set test to passed if the city string matches
+  set_fact:
+      ansibletestTimezoneTestPassed: true
+  when: st.stdout == '{{ timezoneCity }}'
 
 - debug:
-    var: ansibletestFolderTestPassed
+    var: ansibletestTimezoneTestPassed
   when: "{{debug==true}}"
 
 - fail:
-    msg: "Test Failed with path {{ path }}, expected {{ expected }} "
+    msg: "Test Failed with timezoneCity of {{ timezoneCity }} "
   when:
-    - ansibletestFolderTestPassed == false
+    - ansibletestTimezoneTestPassed == false
 
 

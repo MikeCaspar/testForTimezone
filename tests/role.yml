@@ -1,4 +1,9 @@
 ---
+- hosts: localhost
+  remote_user: root
 
-- include: rolepass.yml
-- include: rolefail.yml
+  roles:
+
+    - { role: testForTimezone, timezoneCity: "America/Toronto", debug: false }
+    - { role: testForTimezone, timezoneCity: "America/Montreal", debug: false }
+

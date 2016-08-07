@@ -1,4 +1,3 @@
-ansibletestFolderTestPassed: false
+ansibletestTimezoneTestPassed: false
 debug: false
-expected: null
-
+timezoneCity: null
