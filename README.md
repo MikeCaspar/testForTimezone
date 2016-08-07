@@ -37,6 +37,7 @@ Role Variables
 * timezoneCity (string) - Mandatory
 * debug: (true/false) - Optionally shows debug of vars as it proceeds (defaults to **false**) 
 
+
 Dependencies
 ------------
 
