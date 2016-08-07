@@ -1,0 +1,9 @@
+---
+- hosts: localhost
+  remote_user: root
+
+# This playbook should fail
+
+  roles:
+
+    - { role: testForTimezone, timezoneCity:"America/Montreal" }
