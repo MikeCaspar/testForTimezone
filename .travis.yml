@@ -25,7 +25,7 @@ install:
 
 script:
   - ansible-playbook --syntax-check tests/role.yml
-  - ansible-playbook tests/role.yml > log.txt
+  - ansible-playbook --sudo tests/role.yml > log.txt
 
   - grep '.*TEST PASSED:' log.txt > logpass.txt
   - grep '.*TEST FAILED:' log.txt > logfail.txt
