@@ -5,7 +5,7 @@ language: python
 matrix:
     include:
         - os: linux
-          dist: xenial
+          dist: trusty
           sudo: required
           python: 2.7
           env: TOXENV=py27
