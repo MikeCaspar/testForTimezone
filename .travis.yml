@@ -20,10 +20,6 @@ install:
 
 script:
 
-  - cat /etc/timezone
-
-  - sudo echo "America/Toronto" > /etc/timezone
-
   - ansible-playbook --syntax-check tests/role.yml
 
   - ansible-playbook tests/role.yml > log.txt
@@ -31,7 +27,6 @@ script:
   - cat log.txt
 
   - grep '.*TEST_PASSED:' log.txt > logpass.txt
-
 
   - grep '.*TEST_FAILED:' log.txt > logfail.txt
 
