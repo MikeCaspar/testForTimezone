@@ -20,6 +20,8 @@ install:
 
 script:
 
+  - cat /etc/timezone
+
   - sudo echo "America/Toronto" > /etc/timezone
 
   - ansible-playbook --syntax-check tests/role.yml
