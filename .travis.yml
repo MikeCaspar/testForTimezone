@@ -13,7 +13,6 @@ matrix:
 before_install:
  - sudo apt-get update -qq
  - sudo apt-get install -qq python-apt python-pycurl
- - sudo echo 'America/Toronto' > /etc/timezone
 
 install:
   - pip install ansible
@@ -21,6 +20,7 @@ install:
 
 script:
 
+  - sudo echo "America/Toronto" > /etc/timezone
 
   - ansible-playbook --syntax-check tests/role.yml
 
