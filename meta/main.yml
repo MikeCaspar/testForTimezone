@@ -1,6 +1,6 @@
 galaxy_info:
   author: MikeCaspar
-  description: TDD/BDD style testing for Ansible .. folder tests (experimental)
+  description: Playbook test role for _test/_maintain loop - testForTimezone
   company: Caspar Computer Services Inc.
   
   # If the issue tracker for your role is not on github, uncomment the
