@@ -30,7 +30,7 @@ script:
 
   - grep '.*TEST_PASSED:' log.txt > logpass.txt
   - sleep 5
-  
+
   - grep '.*TEST_FAILED:' log.txt > logfail.txt
 
 # figure out how to check for correct number of passes and fails
