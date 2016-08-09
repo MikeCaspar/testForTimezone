@@ -44,6 +44,7 @@ script:
 #    && (echo 'Role test: pass' && exit 0)
 #    || (echo 'Role test: fail' && exit 1)
 
+notifications:
 
-webhooks: https://galaxy.ansible.com/api/v1/notifications/
+  webhooks: https://galaxy.ansible.com/api/v1/notifications/
 
