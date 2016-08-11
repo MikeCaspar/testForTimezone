@@ -4,6 +4,6 @@
 
   roles:
 
-    - { role: testForTimezone, timezoneCity: "America/Toronto", debug: true }
-    - { role: testForTimezone, timezoneCity: "America/Montreal", debug: true }
+    - { role: testForTimezone, timezoneCity: "Etc/UTC", debug: false }
+    - { role: testForTimezone, timezoneCity: "America/Toronto", debug: false }
 
