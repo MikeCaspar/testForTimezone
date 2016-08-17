@@ -1,3 +1,5 @@
 ansibletestTimezoneTestPassed: false
 debug: false
 timezoneCity: null
+immediate_exit_on_fail: false
+
