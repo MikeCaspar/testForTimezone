@@ -33,3 +33,10 @@
     msg: "TEST_FAILED: timezoneCity of {{ timezoneCity }} "
   when:
     - ansibletestTimezoneTestPassed == false
+    - immediate_exit_on_fail == false
+
+- fail:
+    msg: "TEST_FAILED: timezoneCity of {{ timezoneCity }} "
+  when:
+    - ansibletestTimezoneTestPassed == false
+    - immediate_exit_on_fail == true
