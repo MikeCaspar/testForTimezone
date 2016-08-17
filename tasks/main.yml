@@ -25,12 +25,11 @@
   when: "{{debug==true}}"
 
 - debug:
-    msg: "TEST_FAILED: timezoneCity of {{ timezoneCity }} "
-  when:
-    - ansibletestTimezoneTestPassed == false
-
-- debug:
     msg: "TEST_PASSED: with timezoneCity of {{ timezoneCity }} "
   when:
     - ansibletestTimezoneTestPassed == true
 
+- debug:
+    msg: "TEST_FAILED: timezoneCity of {{ timezoneCity }} "
+  when:
+    - ansibletestTimezoneTestPassed == false

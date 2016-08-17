@@ -6,13 +6,13 @@
 
 # passes
 
-    - { role: testForTimezone, timezoneCity: "Etc/UTC", debug: false }
-    - { role: testForTimezone, timezoneCity: "America/Toronto", debug: false }
+  - { role: testForTimezone, timezoneCity: "Etc/UTC", debug: false }
+  - { role: testForTimezone, timezoneCity: "Etc/UTC", debug: true }
 
 # fails
 
-     - { role: testForTimezone, timezoneCity: "BadCity", debug: false }
-     - { role: testForTimezone, timezoneCity: "BadCity", debug: true }
+  - { role: testForTimezone, timezoneCity: "BadCity", debug: false }
+  - { role: testForTimezone, timezoneCity: "BadCity", debug: true }
 
-     - { role: testForTimezone, timezoneCity: "BadCity", debug: false, immediate_exit_on_fail: false }
-     - { role: testForTimezone, timezoneCity: "BadCity", debug: false, immediate_exit_on_fail: true }
+  - { role: testForTimezone, timezoneCity: "BadCity", debug: false, immediate_exit_on_fail: false }
+  - { role: testForTimezone, timezoneCity: "BadCity", debug: false, immediate_exit_on_fail: true }

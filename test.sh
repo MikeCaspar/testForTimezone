@@ -31,7 +31,7 @@ echo "Number of Failed Tests: $varFailed"
 
 varResultCode="$varPassed$varFailed"
 
-varExpected="11"
+varExpected="24"
 
 echo "Results of Tests:$varResultCode:"
 
